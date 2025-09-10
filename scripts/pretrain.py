@@ -32,7 +32,8 @@ print("creating rlm...")
 rlm = RegressLM.from_default(
         max_input_length=512,
         compile_model=False,
-        batch_size_per_device=64,
+        batch_size=1024,
+        batch_size_per_device=512,
     )
 print("created rlm!\n")
 print("fine tuning...")
