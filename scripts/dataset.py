@@ -2,13 +2,13 @@ import json, random, numpy as np
 import ioh
 
 # Choose dimensions and how many task-instances per (function, dim)
-dims = [2,3,4]
+dims = [2]
 function_ids = list(range(1, 10))     # 1..24 BBOB functions
-instances = list(range(1, 51))        # 50 per (func, dim) -> adjust as you like
+instances = list(range(1, 21))        # 50 per (func, dim) -> adjust as you like
 
 # Per-task sampling budget  (small in-study train; bigger test)
-N_train_per_task = 1024
-N_test_per_task  = 256
+N_train_per_task = 128
+N_test_per_task  = 64
 rng = np.random.default_rng(0)
 
 def format_x_kv(x):
